@@ -6,7 +6,6 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Main {
-    Person person;
 
     public static void main(String[] args) {
         List<Person> personList = new ArrayList<>();
@@ -17,7 +16,6 @@ public class Main {
 
         Person.removeIfOlder(personList);                               // We are removing Persons who are over 21 years old
 
-//        personList.forEach(System.out::println);
         System.out.println("The amount of people who are younger than 21 years old: " + personList.size());
 
         // Sorting by SurName with custom Comparator
@@ -52,18 +50,12 @@ public class Main {
         System.out.println(newPersonList.size());
 
         System.out.println("It is stream:::::::");
-//        List<Person> newListOfPersonsStream = new ArrayList<>();
-//        SerializationPerson.deserializeListOfPersonsWithStream(path, newListOfPersonsStream);
-//        newListOfPersonsStream.forEach(System.out::println);
 
-//        Stream.of()
         List<String> personStringList = newPersonList.stream()
                 .map(person1 -> person1.getName() + " " + person1.getSurname())
-//                .map(Person::toString)
-//                .forEach(System.out::println);
                 .toList();
 
-        personStringList.forEach(System.out::println );
+        personStringList.forEach(System.out::println);
 
     }
 

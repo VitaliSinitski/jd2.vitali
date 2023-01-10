@@ -29,17 +29,6 @@ public class Person implements Serializable {
         return age;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
     public static void peopleGenerator(List<Person> personList) {
         Random random = new Random();
@@ -58,12 +47,10 @@ public class Person implements Serializable {
         Comparator<Person> compareByName = Comparator.comparing(Person::getName);
     }
 
-
     public static void removingDuplicates(List<Person> personList) {
         Set<Person> personSet = new HashSet<>(personList.size());
         personList.removeIf(person -> !personSet.add(person));
     }
-
 
     @Override
     public String toString() {

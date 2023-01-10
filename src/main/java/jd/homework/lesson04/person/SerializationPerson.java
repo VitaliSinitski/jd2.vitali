@@ -12,9 +12,6 @@ public class SerializationPerson {
                 Person person = listOfPersons.get(i);
                 objectOutputStream.writeObject(person);
             }
-//            for (Person person : listOfPersons) {
-//                objectOutputStream.writeObject(person);
-//            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -31,18 +28,5 @@ public class SerializationPerson {
             e.printStackTrace();
         }
     }
-
-//    public static void deserializeListOfPersonsWithStream (Path path, List<Person> listOfPersons) {
-//        try (Stream<String> stream = Files.lines(path)) {
-//            listOfPersons = stream.collect(Collectors.toCollection(ArrayList<Person>::new));
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
-
-
-
-
-
 
 }
